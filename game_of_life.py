@@ -41,7 +41,7 @@ def check_neighbours(universe, N, i, j):
             elif (x == N and y != N):
                 total += universe[0,y]
             # account for if the cell is at the nth y value
-            elif (x != N and y != N):
+            elif (x != N and y == N):
                 total += universe[x,0]
             # account for if the cell is at (n,n) (lower right)
             elif (x == N and y == N):
@@ -74,7 +74,7 @@ def life(universe,N):
                 new_universe[i,j] = 1
     return new_universe
 
-def main(N,T):
+def main(N,T,test):
     '''
     Play the rule of life for all cells,
     updating the universe on each iteration.
@@ -82,7 +82,21 @@ def main(N,T):
     params: boundary to the universe (N), time limit (T)
     '''
     t = 0 # initialise time step
-    universe = seed_universe(N) # seed a random N*N universe
+
+    if test == True:
+        N = 8
+        universe = np.array([
+            [0,0,1,0,0,0,0,0],
+            [1,0,1,0,0,0,0,0],
+            [0,1,1,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0]
+        ]) # create a glider demonstration
+    else:
+        universe = seed_universe(N) # seed a random N*N universe
 
     fig = plt.figure()
 
@@ -113,4 +127,5 @@ def main(N,T):
     plt.show()
 
 if __name__ == '__main__':
-    main(50,200)
+    # run the algorithm with universe limit N, time T, and test(y/n)
+    main(50,200,test=False)
