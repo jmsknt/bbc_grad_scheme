@@ -11,3 +11,11 @@ ASSUMPTIONS:
 * "Infinite" means that the grid representing the universe wraps around on itself, such that the rightmost neighbour to a cell at the limit of X is simply the first cell on that row.
 * The initial state is random (or random enough for this exercise).
 * The game plays out for a specified time.
+
+My solution:
+* Seed the universe
+* Iterate over every cell
+    * Check the cell's number of neighbours
+    * Apply the rules of life to the cell
+* Update the universe's cells with the new values
+* Repeat to time limit or until the universe dies

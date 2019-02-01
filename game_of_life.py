@@ -111,7 +111,7 @@ def main(N,T,test):
 
         # scenario 0
         if np.all(universe==0):
-            pass
+            t = T-1 # bring us to the last time step, the universe is dead
         # other scenarios
         else:
             universe = life(universe,N) # universe becomes the updated universe
