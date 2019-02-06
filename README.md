@@ -3,7 +3,7 @@ My solution for the BBC Software Engineering Grad Scheme coding assignment.
 
 *Run with "python game_of_life.py", if you want to run the test case, change "test" to True in the main arguments*
 
-Requires numpy and matplotlib
+*Requires numpy and matplotlib - written in Python 3.7.0*
 
 Implements an infinite universe with initially random cells that live or die depending on the rules of The Game of Life, within a set amount of time.
 
