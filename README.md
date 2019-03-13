@@ -1,4 +1,3 @@
-My solution for the BBC Software Engineering Grad Scheme coding assignment.
 =========================
 
 *Run with "python game_of_life.py", if you want to run the test case, change "test" to True in the main arguments*
@@ -19,3 +18,6 @@ My solution:
     * Apply the rules of life to the cell
 * Update the universe's cells with the new values
 * Repeat to time limit or until the universe dies
+
+
+(Originally uploaded as my solution for the BBC Software Engineering Grad Scheme coding assignment).
