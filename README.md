@@ -1,3 +1,4 @@
+GAME OF LIFE
 =========================
 
 *Run with "python game_of_life.py", if you want to run the test case, change "test" to True in the main arguments*
